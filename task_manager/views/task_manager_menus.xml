@@ -1,0 +1,18 @@
+<odoo>
+    <record id="action_tasks" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">task.manager.task</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_categories" model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="res_model">task.manager.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_task_manager_root" name="Task Manager"/>
+    <menuitem id="menu_task_manager_tasks" name="Tasks" parent="menu_task_manager_root" action="action_tasks"/>
+    <menuitem id="menu_task_manager_categories" name="Categories" parent="menu_task_manager_root" action="action_categories"/>
+
+</odoo>
